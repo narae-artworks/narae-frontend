@@ -1,0 +1,26 @@
+.universityList {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+}
+
+.inside {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.items {
+    width: 630px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    
+    &, li {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+}

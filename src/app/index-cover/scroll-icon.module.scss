@@ -1,0 +1,9 @@
+.scrollIcon {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+
+    .down {
+        transition: margin-top 0.3s ease-in-out;
+    }
+}

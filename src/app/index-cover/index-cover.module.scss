@@ -1,0 +1,66 @@
+@import url(../fonts/hakgyoansim-namu.css);
+
+.cover {
+    background-image: url(../../img/sky-background.png);
+    background-size: cover;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    position: relative;
+
+    .character {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        right: 0px;
+        top: 0px;
+
+    }
+
+    .left {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .universites {
+        position: absolute;
+        bottom: 15px;
+        right: 75px;
+
+        font-family: 'Hakgyoansim Namu';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        &, & > * {
+            width: max-content;
+        }
+
+        .text {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            max-width: 100vw;
+
+            color: #FFFFFF;
+        }
+        .shadow {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            max-width: 100vw;
+            
+            color: #65A4EF;
+            filter: blur(3px);
+        }
+    }
+}

@@ -14,7 +14,7 @@ type NoticeType = {
 }
 
 type Prop = {
-    title: String,
+    title: string,
     notices: NoticeType[],
     className?: string
 };

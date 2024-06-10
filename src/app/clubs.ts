@@ -5,7 +5,7 @@ export type ClubInfo = {
     clubName: string;
 }
 
-export default [{
+const clubs = [{
     id: 'kku',
     univFullName: '건국대학교',
     univShortName: '건국대',
@@ -61,3 +61,9 @@ export default [{
     univShortName: '한국외대',
     clubName: '해갈'
 }] as ClubInfo[];
+
+export function getClubInfoById(id: string): ClubInfo {
+    return clubs.filter(i => i.id === id)[0];
+}
+
+export default clubs;

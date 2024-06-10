@@ -6,7 +6,7 @@ import styles from './club-artwork-list.module.scss';
 
 type Artwork = {
     thumbnailSrc: string,
-    cartoonId: string,
+    id: string,
     title: string,
     href: string,
 }
@@ -24,7 +24,7 @@ export default function ClubArtworkList({ clubName, clubId, description, clubLog
         <div className={styles.club}>
             <img src={clubLogoSrc} className={styles.logo}></img>
             <div className={styles.nameAndDescription}>
-                <Header href={`/cartoon/${clubId}`} className={styles.name}>
+                <Header href={`.`} className={styles.name}>
                     { clubName }
                 </Header>
                 <ClubDescription>
@@ -34,7 +34,7 @@ export default function ClubArtworkList({ clubName, clubId, description, clubLog
         </div>
         <ArtworkList>
             { arts.map(i => <Artwork
-                href={`/cartoon/${clubId}/${i.cartoonId}`}
+                href={i.href}
                 thumbnailSrc={i.thumbnailSrc}
                 title={i.title}
                 ></Artwork>)

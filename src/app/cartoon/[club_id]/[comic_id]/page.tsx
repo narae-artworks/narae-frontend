@@ -15,7 +15,16 @@ export default function ClubCartoonList() {
                 title="Lorem ipsum"
                 artist="홍길동"
                 categories={["액션", "코미디", "인생"]}
-                illustrationSrc="https://picsum.photos/200/300"
+                comicPageSrcs={[
+                    "https://picsum.photos/2480/3508?a",
+                    "https://picsum.photos/2480/3508?b",
+                    "https://picsum.photos/2480/3508?c",
+                    "https://picsum.photos/2480/3508?d",
+                    "https://picsum.photos/2480/3508?e",
+                    "https://picsum.photos/2480/3508?f",
+                    "https://picsum.photos/2480/3508?g",
+                    "https://picsum.photos/2480/3508?h"
+                ]}
             ></Artwork>
         </ContentContainer>
     </MainLayout>

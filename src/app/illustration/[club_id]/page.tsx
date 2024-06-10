@@ -13,7 +13,7 @@ export default function ClubCartoonList() {
             <ClubArtworkList
                 arts={[1,2,3,4,5,6,7,8,9].map(i => ({
                     id: i.toString(),
-                    href: `/cartoon/${params.club_id}/${i}`,
+                    href: `/illustration/${params.club_id}/${i}`,
                     thumbnailSrc: 'https://picsum.photos/200',
                     title: 'Lorem ipsum' 
                 }))}

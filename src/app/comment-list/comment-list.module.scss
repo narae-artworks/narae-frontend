@@ -1,0 +1,13 @@
+@import "../fonts/nanum-barunpen.css";
+
+.commentList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px 40px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin-top: 20px;
+    font-family: "NanumBarunpen";
+}

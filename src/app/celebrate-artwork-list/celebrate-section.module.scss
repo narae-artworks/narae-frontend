@@ -23,6 +23,7 @@
 
     .artworkSection {
         display: flex;
+        flex-wrap: wrap;
         margin-top: 16px;
         gap: 65px 50px;
     }

@@ -1,0 +1,31 @@
+.awardSection {
+    display: flex;
+    flex-direction: column;
+
+    .ImgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 230px;
+        width: 100%;
+
+        .awardImg {
+            height: 100%;
+            width: auto;
+            right: 0px;
+            top: 0px;
+        }
+    }
+    
+    .awardContainer {
+        display: flex;
+        justify-content: center;
+        .award {
+            display: flex;
+            flex-direction: column;
+            width: 1425px;
+            height: 510px;
+            background: linear-gradient(180deg, #6666664D 50%, #F8FBFF4D 100%);
+        }
+    }
+}

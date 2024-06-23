@@ -1,6 +1,7 @@
 @import "../fonts/nanum-gothic.css";
 @import "../fonts/hakgyoansim-namu.css";
 @import "../fonts/hakgyoansim-bunpil.css";
+@import "./box";
 
 nav.navbar {
     display: flex;
@@ -53,9 +54,7 @@ ul.items {
     flex-direction: row;
 
     .box {
-        background: #253645e6;
-        border: 0.4px solid #FFFFFF;
-        border-radius: 5px;
+        @include box;
     }
 
     .iconBtn {
@@ -73,37 +72,6 @@ ul.items {
 
     .search {
         margin-left: 15px;
-        
-        display: flex;
-        flex-direction: row;
-        padding: 0px 14px;
-        justify-content: baseline;
-        align-items: center;
-        gap: 12px;
-
-        .icon {
-            color: white;
-            width: 25px;
-            height: auto;
-        }
-        
-        input {
-            border: 0px;
-            background-color: transparent;
-            outline: none;
-
-            &, &::placeholder {
-                font-family: 'Hakgyoansim Bunpil';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 16px;
-                display: flex;
-                align-items: center;
-
-                color: #FFFFFF;
-            }
-        }
     }
 
 }

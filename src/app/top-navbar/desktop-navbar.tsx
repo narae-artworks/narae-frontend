@@ -7,6 +7,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import Image from 'next/image'
 import logo from '../../img/logo-black.png';
+import SearchInput from "./search-input";
 
 type Prop = {
     items: TopNavbarItem[];
@@ -40,14 +41,7 @@ export default function DesktopNavbar({ items, className }: Prop) {
         <div className={classNames(styles.box, styles.iconBtn)}>
             <FontAwesomeIcon icon={faInstagram} className={styles.icon}></FontAwesomeIcon>
         </div>
-        <form className={classNames(styles.box, styles.search)}>
-            <div>
-                <FontAwesomeIcon icon={faSearch} className={styles.icon}></FontAwesomeIcon>
-            </div>
-            <input type="search" placeholder="제목/작가/학교/태그로 검색">
-
-            </input>
-        </form>
+        <SearchInput className={styles.search} value="" onChange={(str)=>{}} onSubmit={(str)=>{}}></SearchInput>
     </div>
     </nav>);
 }

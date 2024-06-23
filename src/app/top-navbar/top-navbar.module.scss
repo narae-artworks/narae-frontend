@@ -3,16 +3,15 @@
 @import "../fonts/hakgyoansim-bunpil.css";
 
 nav.navbar {
-    background: #ffffffb3;
-
+    .mobile {
+        display: none;
+    }
     @media screen and (max-width: 1024px) {
         .desktop {
             display: none;
         }        
-    }
-    @media screen and (min-width: 1025px) {
         .mobile {
-            display: none;
+            display: inherit;
         }
     }
 }

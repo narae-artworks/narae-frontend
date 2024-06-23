@@ -42,6 +42,6 @@ export default function TopNavbar({ className }: Prop) {
 
 return <nav className={classNames(styles.navbar, className)}>
     <DesktopNavbar className={styles.desktop} items={items} />
-    <MobileNavbar className={styles.desktop} items={items} />
+    <MobileNavbar className={styles.mobile} items={items} />
 </nav>;
 }

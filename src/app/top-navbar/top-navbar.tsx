@@ -11,6 +11,7 @@ import { SearchProp } from "./search-input";
 export type TopNavbarItem = {
     label: string;
     href: string;
+    type: string;
     submenu?: ({
         label: string;
         href: string;
@@ -27,19 +28,23 @@ export default function TopNavbar({ className }: Prop) {
     const items: TopNavbarItem[] = [
         {
             label: '창작 만화',
-            href: '/cartoon?type=creation'
+            href: '/cartoon?type=creation',
+            type: 'creation',
         },
         {
             label: '팬 만화',
-            href: '/cartoon?type=fan'
+            href: '/cartoon?type=fan',
+            type: 'fan',
         },
         {
             label: '창작 일러스트',
-            href: '/illustration?type=creation'
+            href: '/illustration?type=creation',
+            type: 'creation',
         },
         {
             label: '팬 일러스트',
-            href: '/illustration?type=fan'
+            href: '/illustration?type=fan',
+            type: 'fan',
         },
         /* {
             label: '기타',

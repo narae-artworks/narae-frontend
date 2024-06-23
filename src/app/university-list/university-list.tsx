@@ -7,10 +7,11 @@ import styles from './university-list.module.scss';
 
 type Prop = {
     title: string;
+    type: string;
     hrefCreator: (club: ClubInfo) => string
 }
 
-export default function UniversityList({ title, hrefCreator: createHref } : Prop) {
+export default function UniversityList({ title, type, hrefCreator: createHref } : Prop) {
     return <div className={styles.universityList}>
         <TitleHeader title={title}></TitleHeader>
         <div className={styles.inside}>
@@ -18,7 +19,7 @@ export default function UniversityList({ title, hrefCreator: createHref } : Prop
             <ul className={styles.items}>
                 {clubs.map(i => (
                     <li key={i.id}>
-                        <UniversityItem href={createHref(i)}>{i.univShortName} {i.clubName}</UniversityItem>
+                        <UniversityItem href={createHref(i) + "?type=" + type}>{i.univShortName} {i.clubName}</UniversityItem>
                     </li>
                 ))}
             </ul>

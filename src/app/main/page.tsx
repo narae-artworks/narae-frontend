@@ -9,21 +9,23 @@ export default function Home() {
   return (
     <div className={nightBackground.nightBackground} style={{minHeight: '100vh'}}>
         <TopNavbar className={styles.navbar}></TopNavbar>
-
         <ReactFullpage
-          credits={{enabled: true, label: 'Made with fullpage.js', position: 'right'}}
+          scrollOverflow={false}
+          credits={{enabled: false}}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
                 <div className="section">
-                  영상
+                  <div className={styles.videoContainer}>
+                    <video src="/intro.mp4" autoPlay controls={false}></video>
+                  </div>
                 </div>
-                <div className="section">
+                {/* <div className="section">
                   이벤트
                 </div>
                 <div className="section">
                   어워드
-                </div>
+                </div> */ }
               </ReactFullpage.Wrapper>
             );
           }}

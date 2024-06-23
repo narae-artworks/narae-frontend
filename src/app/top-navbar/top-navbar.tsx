@@ -41,10 +41,10 @@ export default function TopNavbar({ className }: Prop) {
             label: '팬 일러스트',
             href: '/illustration?type=fan'
         },
-        {
+        /* {
             label: '기타',
             href: '/other'
-        }
+        } */
     ]
 
 const searchProps: SearchProp = {

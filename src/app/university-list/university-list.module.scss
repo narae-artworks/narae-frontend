@@ -16,7 +16,7 @@
     flex-direction: row-reverse;
     justify-content: space-between;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1630px) { // 1000(> 987 = width of narae junping image) + 630(item width)
         flex-direction: column;
         justify-content: baseline;
         align-items: center;
@@ -30,7 +30,7 @@
 
 .items {
     width: 630px;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1630px) {
         width: 100%;
     }
 

@@ -3,13 +3,16 @@ import styles from './search-input.module.scss';
 import classNames from "classnames";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-type Prop = {
+export type SearchProp = {
     value: string;
     onChange: (newValue: string) => void;
     onSubmit: (value: string) => void;
+}
+
+type Prop = {
     className?: string;
     smallIcon?: boolean;
-}
+} & SearchProp;
 
 export default function SearchInput({value, onChange, onSubmit, smallIcon, className}: Prop) {
 

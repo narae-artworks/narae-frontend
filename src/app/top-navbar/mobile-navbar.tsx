@@ -9,12 +9,12 @@ import { faBars, faSearch, faX } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 import { useState } from "react";
 import Link from "next/link";
-import SearchInput from "./search-input";
+import SearchInput, { SearchProp } from "./search-input";
 
 type Prop = {
     items: TopNavbarItem[];
     className?: string;
-}
+} & SearchProp;
 
 function NavbarMenu({ items } : Pick<Prop, 'items'>) {
     return <ul className={styles.menu}>
@@ -22,7 +22,7 @@ function NavbarMenu({ items } : Pick<Prop, 'items'>) {
     </ul>
 }
 
-export default function MobileNavbar({ items, className }: Prop) {
+export default function MobileNavbar({ items, className, ...search }: Prop) {
     const [submenuType, setSubmenuType] = useState<null | 'menu' | 'search'>(null);
     
     return <nav className={classNames(styles.navbar, className)}>
@@ -50,7 +50,7 @@ export default function MobileNavbar({ items, className }: Prop) {
         ) : (submenuType === 'search' && 
             <div className={styles.searchContainer}>
 
-                <SearchInput className={styles.search} value="asdf" onChange={()=>{}} onSubmit={()=>{}} smallIcon></SearchInput>
+                <SearchInput className={styles.search} {...search} smallIcon></SearchInput>
             </div>
         )}
     </nav>

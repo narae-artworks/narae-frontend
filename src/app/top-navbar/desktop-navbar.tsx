@@ -7,14 +7,14 @@ import classNames from "classnames";
 import Link from "next/link";
 import Image from 'next/image'
 import logo from '../../img/logo-black.png';
-import SearchInput from "./search-input";
+import SearchInput, { SearchProp } from "./search-input";
 
 type Prop = {
     items: TopNavbarItem[];
     className?: string;
-}
+} & SearchProp;
 
-export default function DesktopNavbar({ items, className }: Prop) {
+export default function DesktopNavbar({ items, className, ...search }: Prop) {
     return (<nav className={classNames(styles.navbar, className)}>
     <Link href="/" className={styles.home}>
         <Image src={logo} alt="나래 로고"></Image>    
@@ -41,7 +41,7 @@ export default function DesktopNavbar({ items, className }: Prop) {
         <div className={classNames(styles.box, styles.iconBtn)}>
             <FontAwesomeIcon icon={faInstagram} className={styles.icon}></FontAwesomeIcon>
         </div>
-        <SearchInput className={styles.search} value="" onChange={(str)=>{}} onSubmit={(str)=>{}}></SearchInput>
+        <SearchInput className={styles.search} {...search} ></SearchInput>
     </div>
     </nav>);
 }

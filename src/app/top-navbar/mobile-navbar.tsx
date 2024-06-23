@@ -47,11 +47,11 @@ export default function MobileNavbar({ items, className, ...search }: Prop) {
 
         { (submenuType === 'menu') ? (
             <NavbarMenu items={items} />
-        ) : (submenuType === 'search' && 
+        ) : /*(submenuType === 'search' && 
             <div className={styles.searchContainer}>
 
                 <SearchInput className={styles.search} {...search} smallIcon></SearchInput>
             </div>
-        )}
+        )*/ null}
     </nav>
 }

@@ -41,7 +41,9 @@ export default function DesktopNavbar({ items, className, ...search }: Prop) {
         <div className={classNames(styles.box, styles.iconBtn)}>
             <FontAwesomeIcon icon={faInstagram} className={styles.icon}></FontAwesomeIcon>
         </div>
+        {/* 
         <SearchInput className={styles.search} {...search} ></SearchInput>
+        */}
     </div>
     </nav>);
 }

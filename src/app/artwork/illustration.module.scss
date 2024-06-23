@@ -35,6 +35,10 @@
             font-weight: 300;
             font-size: 24px;
             line-height: 40px;
+            @media screen and (max-width: 1024px) {
+                font-size: 12px;
+                line-height: 20px;
+            }
             letter-spacing: -0.06em;
     
             color: #000000;
@@ -51,6 +55,7 @@
             line-height: 96px;
             letter-spacing: -0.06em;
             
+            
             color: #000000;
             
             position: relative;
@@ -58,6 +63,19 @@
                 position: absolute;
                 right: -240px;
                 top: -45px;
+            }
+            
+            @media screen and (max-width: 1024px) {
+                font-size: 24px;
+                line-height: 24px;
+                .wing {
+                    right: -80px;
+                    top: -20px;
+                    img {
+                        height: 40px !important;
+                        width: auto !important;
+                    }
+                }
             }
         }
         .categories {
@@ -70,6 +88,11 @@
 
             margin: 39px 0px 0px 0px;
             padding: 0px;
+
+            @media screen and (max-width: 1024px) {
+                gap: 12px;
+                margin: 14px 0px 0px 0px;
+            }
             li {
                 display: flex;
                 justify-content: center;
@@ -86,6 +109,13 @@
                 font-size: 24px;
                 line-height: 40px;
                 letter-spacing: -0.06em;
+
+                @media screen and (max-width: 1024px) {
+                    height: 30px;
+                    width: 80px;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
 
                 color: #000000;
 

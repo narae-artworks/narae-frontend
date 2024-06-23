@@ -80,6 +80,11 @@
             font-weight: 300;
             font-size: 24px;
             line-height: 40px;
+
+            @media screen and (max-width: 1024px) {
+                font-size: 12px;
+                line-height: 20px;
+            }
             letter-spacing: -0.06em;
     
             color: #000000;
@@ -101,6 +106,9 @@
             font-size: 96px;
             /* or 42% */
             letter-spacing: -0.06em;
+            @media screen and (max-width: 1024px) {
+                font-size: 20px;
+            }
             
             color: #000000;
             
@@ -134,6 +142,15 @@
                     color: #000000;
 
                     border: 2.5px solid rgba(0, 0, 0, 0.533333);
+                }
+                @media screen and (max-width: 1024px) {
+                    margin: 10px 0px 0px 0px;
+                    gap: 10px 0px 0px 0px;
+                    li {
+                        height: 80px;
+                        width: 30px;
+                        font-size: 12px;
+                    }
                 }
             }
         }

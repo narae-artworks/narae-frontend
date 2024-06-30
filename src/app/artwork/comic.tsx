@@ -41,6 +41,9 @@ function Viewer({ comicPageSrcs }: ComicProp) {
     })
 
     return <div className={styles.viewer}>
+        <div className={styles.desktopHelp}>
+            왼쪽 이미지를 누르면 다음 페이지로, 오른쪽 이미지를 누르면 이전 페이지로 이동합니다.
+        </div>
         <div className={styles.desktop}>
             <a className={styles.leftPage} href='#' onClick={increasePageIdx(1)}>
                 <NullSafeImage srcs={comicPageSrcs} idx={leftPageIdx}></NullSafeImage>

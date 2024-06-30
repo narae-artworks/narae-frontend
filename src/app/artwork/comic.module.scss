@@ -2,6 +2,12 @@
 @import "../fonts/bookk-gothic.css";
 
 .viewer {
+    .desktopHelp {
+        text-align: center;
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
     .desktop {
         @media screen and (max-width: 1024px) {
             display: none;

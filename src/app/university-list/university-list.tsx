@@ -2,7 +2,7 @@ import Image from 'next/image';
 import character from '../../img/character-jumping.png';
 import TitleHeader from '../title-header/title-header';
 import UniversityItem from './item';
-import clubs, { ClubInfo } from '../clubs';
+import clubs, { ClubInfo } from '../../data/clubs';
 import styles from './university-list.module.scss';
 
 type Prop = {

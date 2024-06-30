@@ -9,11 +9,12 @@ type Prop = {
     
 type ComicProp = {
     comicPageSrcs: string[];
+    
 }
 
-function NullSafeImage({ srcs, idx }: { srcs: string[]; idx: number | null }) {
-    return idx === null
-        ? null
+function NullSafeImage({ srcs, idx, fallback }: { srcs: string[]; idx: number | null; fallback?: string; }) {
+    return idx === null 
+        ? (fallback ?? null) 
         : <img src={srcs[idx]} alt={`${idx + 1}번째 만화 페이지`}></img>
 }
 

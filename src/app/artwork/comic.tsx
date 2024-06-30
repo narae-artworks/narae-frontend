@@ -44,6 +44,9 @@ function Viewer({ comicPageSrcs }: ComicProp) {
         <div className={styles.desktopHelp}>
             왼쪽 이미지를 누르면 다음 페이지로, 오른쪽 이미지를 누르면 이전 페이지로 이동합니다.
         </div>
+        <div className={styles.mobileHelp}>
+            이미지의 왼쪽을 누르면 다음 페이지로, 이미지의 오른쪽을 누르면 이전 페이지로 이동합니다.
+        </div>
         <div className={styles.desktop}>
             <a className={styles.leftPage} href='#' onClick={increasePageIdx(1)}>
                 <NullSafeImage srcs={comicPageSrcs} idx={leftPageIdx}></NullSafeImage>
@@ -55,8 +58,8 @@ function Viewer({ comicPageSrcs }: ComicProp) {
         <div className={styles.mobile}>
             <div className={styles.page}>
                 <img src={comicPageSrcs[currentPage]} alt={`${currentPage + 1}번째 만화 페이지`}></img>
-                <a href='#' className={styles.left} onClick={increasePageIdx(-1)}></a>
-                <a href='#' className={styles.right} onClick={increasePageIdx(1)}></a>
+                <a href='#' className={styles.left} onClick={increasePageIdx(1)}></a>
+                <a href='#' className={styles.right} onClick={increasePageIdx(-1)}></a>
             </div>
         </div>
     </div>

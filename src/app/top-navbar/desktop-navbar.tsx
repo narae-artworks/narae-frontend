@@ -32,15 +32,15 @@ export default function DesktopNavbar({ items, className, ...search }: Prop) {
     </ul>
     <div className={styles.space}></div>
     <div className={styles.right}>
-        <div className={classNames(styles.box, styles.iconBtn)}>
+        <a href="mailto:2024narae@gmail.com" className={classNames(styles.box, styles.iconBtn)}>
             <FontAwesomeIcon icon={faEnvelope} className={styles.icon}></FontAwesomeIcon>
-        </div>
-        <div className={classNames(styles.box, styles.iconBtn)}>
+        </a>
+        <a href="https://twitter.com/unitynarae" className={classNames(styles.box, styles.iconBtn)}>
             <FontAwesomeIcon icon={faXTwitter} className={styles.icon}></FontAwesomeIcon>
-        </div>
-        <div className={classNames(styles.box, styles.iconBtn)}>
+        </a>
+        <a  href="https://instagram.com/unitynarae" className={classNames(styles.box, styles.iconBtn)}>
             <FontAwesomeIcon icon={faInstagram} className={styles.icon}></FontAwesomeIcon>
-        </div>
+        </a>
         {/* 
         <SearchInput className={styles.search} {...search} ></SearchInput>
         */}

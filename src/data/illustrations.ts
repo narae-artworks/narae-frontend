@@ -1,16 +1,20 @@
 type Illustration = {
+    id: string;
+    artist: string;
     clubId: string;
     title: string;
     image: string;
-    tags: string[];
+    categories: string[];
     /** 2차 창작 여부 */
     derivateWork: boolean;
 }
 
-export const datcartoon = [{
+export const illustrations = [{
+    id: '1',
     clubId: "kku",
+    artist: "홍길동",
     title: "Lorem ipsum",
-    image: "image/1.jpg",
-    tags: ["a", "b", "c"],
+    image: "/image/1.jpg",
+    categories: ["a", "b", "c"],
     derivateWork: false
 }] as Illustration[];

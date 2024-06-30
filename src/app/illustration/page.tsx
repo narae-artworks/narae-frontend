@@ -5,6 +5,7 @@ import ContentContainer from "../main-layout/content-container";
 import MainLayout from "../main-layout/main-layout";
 import UniversityList from "../university-list/university-list";
 import { useState, useEffect } from "react";
+import { illustrations } from "@/data/illustrations";
 
 interface QueryParams {
     [key: string]: string;
@@ -16,9 +17,10 @@ export default function CartoonList() {
 
     return <MainLayout>
         <ContentContainer>
-            <UniversityList title= {(type == "fan" ? "팬 " : "창작 ") + "일러스트 홈"}
+            <UniversityList filter={(info) => illustrations.filter(i => info.id === i.clubId && i.derivateWork === (type === 'fan')).length > 0}
+                 title= {(type == "fan" ? "팬 " : "창작 ") + "일러스트 홈"}
                 type={type}
-                hrefCreator={(club) => `/illustration/${club.id}`}></UniversityList>
+                hrefCreator={(club) => `/illustration/${club.id}?type=${type}`}></UniversityList>
         </ContentContainer>
     </MainLayout>
 }

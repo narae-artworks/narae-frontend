@@ -1,4 +1,5 @@
 type Cartoon = {
+    id: string;
     clubId: string;
     title: string;
     images: string[];
@@ -8,7 +9,8 @@ type Cartoon = {
     derivateWork: boolean;
 }
 
-export const datcartoon = [{
+export const cartoons = [{
+    id: '1',
     clubId: "kku",
     title: "Lorem ipsum",
     images: [

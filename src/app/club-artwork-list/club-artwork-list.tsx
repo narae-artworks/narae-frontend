@@ -20,25 +20,27 @@ type Prop = {
 };
 
 export default function ClubArtworkList({ clubName, clubId, description, clubLogoSrc, arts } : Prop) {
-    return <div className={styles.clubArtworkList}>
-        <div className={styles.club}>
-            <img src={clubLogoSrc} className={styles.logo}></img>
-            <div className={styles.nameAndDescription}>
-                <Header href={`.`} className={styles.name}>
-                    { clubName }
-                </Header>
-                <ClubDescription>
-                    { description }
-                </ClubDescription>
+    return (
+        <div className={styles.clubArtworkList}>
+            <div className={styles.club}>
+                <img src={clubLogoSrc} className={styles.logo} alt="Club Logo" />
+                <div className={styles.nameAndDescription}>
+                    <Header href={`.`} className={styles.name}>
+                        {clubName}
+                    </Header>
+                    <ClubDescription>{description}</ClubDescription>
+                </div>
             </div>
+            <ArtworkList>
+                {arts.map((i) => (
+                    <Artwork
+                        key={i.id} // Add a unique "key" prop for each element in the iterator
+                        href={i.href}
+                        thumbnailSrc={i.thumbnailSrc}
+                        title={i.title}
+                    ></Artwork>
+                ))}
+            </ArtworkList>
         </div>
-        <ArtworkList>
-            { arts.map(i => <Artwork
-                href={i.href}
-                thumbnailSrc={i.thumbnailSrc}
-                title={i.title}
-                ></Artwork>)
-            }
-        </ArtworkList>
-    </div>
+    );
 }

@@ -19,6 +19,7 @@ export default function CommentList({ comments, className } : Prop) {
     return <ul className={classNames(styles.commentList, className)}>
         { 
             comments.map(i => <Comment
+                key={i.id} // Add key prop here
                 id={i.id}
                 href={i.href}
                 thumbnailSrc={i.thumbnailSrc}

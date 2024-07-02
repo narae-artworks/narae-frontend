@@ -20,7 +20,7 @@ export default function Awards({ awards, className } : Prop) {
             <div className={styles.award}>
                 {
                     awards.map(i => {
-                        return <div>{i.content}</div>
+                        return <div key={i.id}>{i.content}</div>
                     })
                 }
             </div>

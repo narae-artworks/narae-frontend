@@ -73,7 +73,7 @@ export default function Comic({ categories, title, artist, comicPageSrcs }: Prop
             <div className={styles.title}>
                 { title }
                 <ul className={styles.categories}>
-                    { categories.map(i => <li>{i}</li>) }
+                    { categories.map((i, index) => <li key={index}>{i}</li>) }
                 </ul>
             </div>
         </header>

@@ -33,7 +33,7 @@ export default function Illustration({ categories, title, artist, illustrationSr
                 </div>
             </div>
             <ul className={styles.categories}>
-                { categories.map(i => <li>{i}</li>) }
+                { categories.map((i, index) => <li key={index}>{i}</li>) }
             </ul>
         </header>
         <IllustrationViewer illustrationSrc={illustrationSrc}></IllustrationViewer>

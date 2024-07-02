@@ -18,7 +18,7 @@ type Prop = {
 
 function NavbarMenu({ items } : Pick<Prop, 'items'>) {
     return <ul className={styles.menu}>
-        { items.map(i => <li><Link href={i.href}>{i.label}</Link></li>)}
+        { items.map(i => <li key={i.label}><Link href={i.href}>{i.label}</Link></li>)}
     </ul>
 }
 

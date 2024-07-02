@@ -1,0 +1,28 @@
+@import "../fonts/nanum-barunpen.css";
+
+.descriptionContainer {
+    display: flex;
+    justify-content: center;
+    .descriptionBox {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 1381px;
+        height: 186px;
+        border-radius: 20px;
+        background: linear-gradient(180deg, #44C0F14D 50%, #A0C9FF4D 100%);
+
+        .description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            height: 90%;
+            font-family: 'NanumBarunpen';
+            font-size: 32px;
+            letter-spacing: -2px;
+
+            color: #666666;
+        }
+    }
+}

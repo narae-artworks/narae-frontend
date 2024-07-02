@@ -1,0 +1,44 @@
+.clubArtworkList {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    
+    .club {
+        display: flex;
+        flex-direction: row;
+        gap: 34px;
+        flex: 1;
+
+        @media screen and (max-width: 1200px) { // issue occured when screenwidth is 1025~1100px
+            flex-direction: column;
+            gap: 17px;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 284px;
+            max-width: 100%;
+            height: auto;
+        }
+        .nameAndDescription {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            width: 100%;
+
+            .name {
+                @media screen and (min-width: 1241px) {
+                    width: 627px;
+                }
+                //@media screen and (max-width: 1240px) {
+                //    width: 100%;
+                //}      
+            }
+        }
+    }
+
+    .artworks {
+
+    }
+}

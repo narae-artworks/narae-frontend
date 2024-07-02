@@ -1,0 +1,17 @@
+@import "../fonts/nanum-gothic.css";
+@import "../fonts/hakgyoansim-namu.css";
+@import "../fonts/hakgyoansim-bunpil.css";
+
+nav.navbar {
+    .mobile {
+        display: none;
+    }
+    @media screen and (max-width: 1024px) {
+        .desktop {
+            display: none;
+        }        
+        .mobile {
+            display: inherit;
+        }
+    }
+}

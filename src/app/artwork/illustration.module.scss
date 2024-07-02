@@ -1,0 +1,126 @@
+@import "../fonts/hakgyoansim-namu.css";
+@import "../fonts/bookk-gothic.css";
+
+.viewer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .illustration {
+        margin-top: 30px;
+    }
+
+    .shadow {
+        position: absolute;
+        width: 150%;
+        left: 50%;
+        top: -25%;
+    }
+}
+
+.illustration {
+    header {
+        display: flex;
+        flex-direction: column;
+
+        .artist {
+            font-family: 'Bookk Gothic';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 40px;
+            @media screen and (max-width: 1024px) {
+                font-size: 12px;
+                line-height: 20px;
+            }
+            letter-spacing: -0.06em;
+    
+            color: #000000;
+        }
+
+        .title {
+            margin-top: 10px;
+            width: fit-content;
+
+            font-family: 'Hakgyoansim Namu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 96px;
+            letter-spacing: -0.06em;
+            
+            
+            color: #000000;
+            
+            position: relative;
+            .wing {
+                position: absolute;
+                right: -240px;
+                top: -45px;
+            }
+            
+            @media screen and (max-width: 1024px) {
+                font-size: 24px;
+                line-height: 24px;
+                .wing {
+                    right: -80px;
+                    top: -20px;
+                    img {
+                        height: 40px !important;
+                        width: auto !important;
+                    }
+                }
+            }
+        }
+        .categories {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 27px;
+
+            list-style-type: none;
+
+            margin: 39px 0px 0px 0px;
+            padding: 0px;
+
+            @media screen and (max-width: 1024px) {
+                gap: 12px;
+                margin: 14px 0px 0px 0px;
+            }
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                box-sizing: border-box;
+                height: 77px;
+                width: 167px;
+                border-radius: 50%;
+
+                font-family: 'Bookk Gothic';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 40px;
+                letter-spacing: -0.06em;
+
+                @media screen and (max-width: 1024px) {
+                    height: 30px;
+                    width: 80px;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+
+                color: #000000;
+
+                border: 2.5px solid rgba(0, 0, 0, 0.533333);
+            }
+        }
+    }
+}

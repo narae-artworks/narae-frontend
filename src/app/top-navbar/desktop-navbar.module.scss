@@ -1,0 +1,78 @@
+@import "../fonts/nanum-gothic.css";
+@import "../fonts/hakgyoansim-namu.css";
+@import "../fonts/hakgyoansim-bunpil.css";
+@import "./box";
+
+nav.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: #ffffffb3;
+
+    height: 128px;
+    box-sizing: border-box;
+
+    padding: 0px 70px 0px 5%;
+
+    a {
+        text-decoration: none;
+    }
+}
+ul.items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    
+    .label {
+        padding: 0px 34px;
+        display: block;
+
+        white-space: nowrap;
+
+        font-family: 'Hakgyoansim Namu';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: -0.05em;
+
+        color: #3F4C5E;
+
+        text-shadow: -1px 1px 0 white,
+                    1px -1px 0 white,
+                    -1px -1px 0 white,
+                    1px 1px 0 white;
+    }
+}
+.space {
+    flex: 1;
+}
+.right {
+    display: flex;
+    flex-direction: row;
+
+    .box {
+        @include box;
+    }
+
+    .iconBtn {
+        padding: 8px 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .icon {
+            width: 33px;
+            height: auto;
+            color: white;
+        }
+    }
+
+    .search {
+        margin-left: 15px;
+    }
+
+}
+    

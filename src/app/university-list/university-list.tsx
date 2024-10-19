@@ -20,7 +20,7 @@ export default function UniversityList({ title, type, hrefCreator: createHref, f
             <ul className={styles.items}>
                 {clubs.filter(filter ?? (() => true)).map(i => (
                     <li key={i.id}>
-                        <UniversityItem href={createHref(i) + "?type=" + type}>{i.univShortName} {i.clubName}</UniversityItem>
+                        <UniversityItem href={createHref(i)}>{i.univShortName} {i.clubName}</UniversityItem>
                     </li>
                 ))}
             </ul>

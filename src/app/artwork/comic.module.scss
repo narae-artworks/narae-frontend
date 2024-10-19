@@ -83,6 +83,17 @@
 .comic {
     display: flex;
     flex-direction: row;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;    
+    }
+
+    .description {
+        font-size: 24px;
+    
+        @media screen and (max-width: 1024px) {
+            font-size: 12px;
+        }
+    }
 
     .viewer {
         flex: 1;
@@ -94,6 +105,12 @@
         inline-size: fit-content;
         & > * {
             writing-mode: vertical-lr;
+        }
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;    
+            & > * {
+                writing-mode: unset;
+            }
         }
 
         .artist {
@@ -113,14 +130,6 @@
             
         }
 
-        .description {
-            font-size: 24px;
-        
-            @media screen and (max-width: 1024px) {
-                font-size: 12px;
-            }
-        }
-
         .title {
             display: flex;
             flex-direction: row;
@@ -138,6 +147,8 @@
             letter-spacing: -0.06em;
             @media screen and (max-width: 1024px) {
                 font-size: 20px;
+                flex-direction: column;
+                flex-wrap: wrap;
             }
             
             color: #000000;
@@ -174,13 +185,16 @@
                     border: 2.5px solid rgba(0, 0, 0, 0.533333);
                 }
                 @media screen and (max-width: 1024px) {
-                    margin: 10px 0px 0px 0px;
-                    gap: 10px 0px 0px 0px;
+                    margin: 0px;
+                    gap: 8px;
+                    flex-wrap: wrap;
                     li {
-                        height: 80px;
-                        width: 30px;
+                        width: initial;
+                        height: initial;
+                        padding: 1px 10px;
                         font-size: 12px;
                     }
+                    white-space: nowrap;
                 }
             }
         }

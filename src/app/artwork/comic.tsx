@@ -76,10 +76,10 @@ export default function Comic({ categories, description, title, artist, comicPag
                     { categories.map((i, index) => <li key={index}>{i}</li>) }
                 </ul>
             </div>
-            <p className={styles.description}>
-                { description }
-            </p>
         </header>
+        <p className={styles.description}>
+            { description }
+        </p>
         <Viewer comicPageSrcs={comicPageSrcs}></Viewer>
     </div>
 }

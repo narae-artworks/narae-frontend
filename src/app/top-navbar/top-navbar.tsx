@@ -32,11 +32,6 @@ export default function TopNavbar({ className }: Prop) {
             type: 'creation',
         },
         {
-            label: '팬 만화',
-            href: '/cartoon?type=fan',
-            type: 'fan',
-        },
-        {
             label: '창작 일러스트',
             href: '/illustration?type=creation',
             type: 'creation',

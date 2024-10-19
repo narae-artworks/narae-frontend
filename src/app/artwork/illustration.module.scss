@@ -78,6 +78,14 @@
                 }
             }
         }
+
+        .description {
+            font-size: 24px;
+            @media screen and (max-width: 1024px) {
+                font-size: 12px;
+            }
+        }
+
         .categories {
             display: flex;
             flex-direction: row;

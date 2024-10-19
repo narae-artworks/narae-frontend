@@ -5,6 +5,7 @@ type Prop = {
     artist: string;
     title: string;
     categories: string[];
+    description: string;
 } & ({illustrationSrc: string}|{comicPageSrcs: string[]});
 
 export default function Artwork( props: Prop ) {

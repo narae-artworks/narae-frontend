@@ -18,6 +18,7 @@ export default function ClubCartoonList() {
                 artist={art.artist}
                 categories={art.categories}
                 comicPageSrcs={art.images}
+                description={art.description}
             ></Artwork>
         </ContentContainer>
     </MainLayout>

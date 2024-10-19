@@ -5,11 +5,11 @@ type Prop = {
     artist: string;
     title: string;
     categories: string[];
+    description: string;
 } & ComicProp;
     
 type ComicProp = {
     comicPageSrcs: string[];
-    
 }
 
 function NullSafeImage({ srcs, idx, fallback }: { srcs: string[]; idx: number | null; fallback?: string; }) {
@@ -66,7 +66,7 @@ function Viewer({ comicPageSrcs }: ComicProp) {
     </div>
 }
 
-export default function Comic({ categories, title, artist, comicPageSrcs }: Prop ) {
+export default function Comic({ categories, description, title, artist, comicPageSrcs }: Prop ) {
     return <div className={styles.comic}>
         <header>
             <div className={styles.artist}> { artist }</div>
@@ -76,6 +76,9 @@ export default function Comic({ categories, title, artist, comicPageSrcs }: Prop
                     { categories.map((i, index) => <li key={index}>{i}</li>) }
                 </ul>
             </div>
+            <p className={styles.description}>
+                { description }
+            </p>
         </header>
         <Viewer comicPageSrcs={comicPageSrcs}></Viewer>
     </div>

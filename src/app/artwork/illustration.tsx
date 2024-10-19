@@ -7,6 +7,7 @@ type Prop = {
     artist: string;
     title: string;
     categories: string[];
+    description: string;
 } & IllustrationProp;
 
 type IllustrationProp = {
@@ -22,7 +23,7 @@ function IllustrationViewer({ illustrationSrc, className } : IllustrationProp & 
     </div>
 }
 
-export default function Illustration({ categories, title, artist, illustrationSrc }: Prop ) {
+export default function Illustration({ categories, title, artist, illustrationSrc, description }: Prop ) {
     return <div className={styles.illustration}>
         <header>
             <div className={styles.artist}>{ artist }</div>
@@ -35,6 +36,9 @@ export default function Illustration({ categories, title, artist, illustrationSr
             <ul className={styles.categories}>
                 { categories.map((i, index) => <li key={index}>{i}</li>) }
             </ul>
+            <p className={styles.description}>
+                {description}
+            </p>
         </header>
         <IllustrationViewer illustrationSrc={illustrationSrc}></IllustrationViewer>
     </div>

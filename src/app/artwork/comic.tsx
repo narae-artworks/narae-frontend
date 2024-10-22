@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './comic.module.scss';
+import classNames from 'classnames';
 
 type Prop = {
     artist: string;
@@ -76,6 +77,9 @@ export default function Comic({ categories, description, title, artist, comicPag
                     { categories.map((i, index) => <li key={index}>{i}</li>) }
                 </ul>
             </div>
+            <p className={classNames(styles.description, styles.pcOnly)}>
+                { description }
+            </p>
         </header>
         <p className={styles.description}>
             { description }

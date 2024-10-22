@@ -1,6 +1,12 @@
 @import "../fonts/hakgyoansim-namu.css";
 @import "../fonts/bookk-gothic.css";
 
+@media screen and (min-width: 1025px) {
+    .pcOnly {
+        display: none;
+    }
+}
+
 .viewer {
     display: flex;
     align-items: flex-end;
